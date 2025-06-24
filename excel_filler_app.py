@@ -8,7 +8,7 @@ def get_next_image_number(last_image_number):
     number = int(''.join(filter(str.isdigit, last_image_number)))
     return f"{prefix}{number + 1}"
 
-def generate_next_rows(last_image_number, count=100):
+def generate_next_rows(last_image_number, count=300):
     rows = []
     current_image = last_image_number
     for _ in range(count // 4):
@@ -32,7 +32,7 @@ if uploaded_file:
     last_image_number = df['image_number'].iloc[-1]
 
     # Generate next 100 rows
-    new_rows = generate_next_rows(last_image_number, count=100)
+    new_rows = generate_next_rows(last_image_number, count=300)
 
     # Append to original DataFrame
     updated_df = pd.concat([df, new_rows], ignore_index=True)
