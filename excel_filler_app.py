@@ -20,7 +20,7 @@ def generate_next_rows(last_image_number, count=1000):
             })
     return pd.DataFrame(rows)
 
-st.title("PRASANTH")
+st.title("Excel Sequence Filler")
 
 uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx"])
 
